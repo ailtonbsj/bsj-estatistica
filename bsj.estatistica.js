@@ -112,9 +112,11 @@ module.exports = {
 	produtoDeVetores,
 	somatorio,
 	mediaPorFrequenciaAbsoluta,
+	mediaPorFrequenciaRelativa,
 	amplitudeDasClasses,
 	obterClassePorValor,
 	frequenciaAcumulada,
+	frequenciaRelativa,
 	mediana,
 	varianciaPorFrequenciaAbsoluta,
 	desvioPadraoPorFrequenciaAbsoluta
