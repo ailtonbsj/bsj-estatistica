@@ -2,6 +2,13 @@
 
 Uma biblioteca javascript para Estatística Descritiva.
 
+## Dependencias
+
+```
+sudo apt install libgif-dev
+sudo apt install libjpeg-dev
+```
+
 ## Exercícios de Estatística
 
 ### 001
@@ -58,3 +65,22 @@ let populacao = [ 66.4, 68.0, 89.0, 74.8, 67.1, 71.5, 95.7, 79.5, 87.9,
 a) Agrupe essas informações em quatro intervalos, cada um com amplitude igual a 10, a partir do valor 59, e faça uma tabela de frequência.
 
 b) Utilizando os dados agrupados, calcule a média e desvio padrão. Quantos valores não pertencem ao intervalo [media - desvioPadrao, media + desvioPadrao]?
+
+### 004
+
+Em um determinado Estado foi realizado nas suas duas maiores cidades, A e B, um levantamento sobre o grau de satisfação da população em relação à administração do governador. Um dos objetivos do levantamento era verificar se havia diferenças significativas quanto à opinião dos moradores das duas cidades.
+Cada entrevistado atribuiu uma nota de 0 a 100 para expressar sua satisfação.
+Adotou-se o seguinte critério de avaliação: caso a diferença entre as notas médias obtidas nas duas cidade não excedesse 5 (em módulo), a conclusão seria de que não havia diferenças significativas.
+Com base nos dados apresentados a seguirm conclua se há divergẽncia entre a opinião dos moradores de uma cidade a outra.
+
+```js
+let cidadeAPont = [
+	{inferior: 10, superior: 30},
+	{inferior: 30, superior: 50},
+	{inferior: 50, superior: 70},
+	{inferior: 70, superior: 90}
+];
+
+let cidadeAPorc = [45, 20, 25, 10];
+```
+

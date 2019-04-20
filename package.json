@@ -1,0 +1,28 @@
+{
+  "name": "bsj-estatistica",
+  "version": "0.0.1",
+  "description": "Uma biblioteca javascript para Estatística Descritiva.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ailtonbsj/bsj-estatistica.git"
+  },
+  "keywords": [
+    "estatistica",
+    "matematica"
+  ],
+  "author": "ailtonbsj",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ailtonbsj/bsj-estatistica/issues"
+  },
+  "homepage": "https://github.com/ailtonbsj/bsj-estatistica#readme",
+  "dependencies": {
+    "chart.js": "~2.7.*",
+    "chartjs-node": "^1.7.1",
+    "chartjs-plugin-datalabels": "^0.6.0"
+  }
+}

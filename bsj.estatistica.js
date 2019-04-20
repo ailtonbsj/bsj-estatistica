@@ -1,3 +1,6 @@
+const ChartjsNode = require('chartjs-node');
+const ChartDataLabels = require('chartjs-plugin-datalabels');
+
 function classesEFrequenciaAbsoluta(vetorBruto, inferiorInicial, amplitude) {
 	let classes = [];
 	let Ni = [];
@@ -107,6 +110,59 @@ function desvioPadraoPorFrequenciaRelativa(Xi, Fi) {
 	return Math.sqrt(varianciaPorFrequenciaRelativa(Xi, Fi));
 }
 
+function graficoDeBarras(titulo, classes, Ni){
+	let labels = classes.map(v => v.inferior + ' ├── ' + v.superior);
+	let myChartOptions = {
+	    plugins: {
+	        afterDraw: function (chart, easing) {
+	            var self = chart.config;
+	            var ctx = chart.chart.ctx;
+	        },
+	        datalabels: {
+                color: 'black',
+            }
+	    },
+	    scales: {
+	        yAxes: [{
+	            ticks: {
+	                beginAtZero: true
+	            }
+	        }]
+	    },
+	}
+	let chartNode = new ChartjsNode(600, 600);
+	chartNode.drawChart({
+		type: 'bar',
+		data: {
+			labels: labels,
+			datasets: [{
+				label: titulo,
+				data: Ni,
+				backgroundColor: '#EE6384',
+				borderColor: 'black',
+				borderWidth: 2
+			}]
+		},
+		plugins: [ChartDataLabels],
+		options: myChartOptions,
+	})
+	.then(() => {
+    	return chartNode.getImageBuffer('image/png');
+	})
+	.then(buffer => {
+	    Array.isArray(buffer)
+	    return chartNode.getImageStream('image/png');
+	})
+	.then(streamResult => {
+	    streamResult.stream
+	    streamResult.length
+	    return chartNode.writeImageToFile('image/png', './'+titulo+'.png');
+	})
+	.then(() => {
+		console.log("Imagem gerada: ", titulo+'.png');		
+	});
+}
+
 module.exports = {
 	classesEFrequenciaAbsoluta,
 	mediaDasClasses,
@@ -123,5 +179,6 @@ module.exports = {
 	varianciaPorFrequenciaAbsoluta,
 	varianciaPorFrequenciaRelativa,
 	desvioPadraoPorFrequenciaAbsoluta,
-	desvioPadraoPorFrequenciaRelativa
+	desvioPadraoPorFrequenciaRelativa,
+	graficoDeBarras
 }
