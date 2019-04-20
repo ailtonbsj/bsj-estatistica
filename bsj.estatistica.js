@@ -108,16 +108,20 @@ function desvioPadraoPorFrequenciaRelativa(Xi, Fi) {
 }
 
 module.exports = {
+	classesEFrequenciaAbsoluta,
 	mediaDasClasses,
-	produtoDeVetores,
-	somatorio,
-	mediaPorFrequenciaAbsoluta,
-	mediaPorFrequenciaRelativa,
 	amplitudeDasClasses,
 	obterClassePorValor,
+	obterIndicePorValor,
+	somatorio,
+	produtoDeVetores,
 	frequenciaAcumulada,
 	frequenciaRelativa,
+	mediaPorFrequenciaAbsoluta,
+	mediaPorFrequenciaRelativa,
 	mediana,
 	varianciaPorFrequenciaAbsoluta,
-	desvioPadraoPorFrequenciaAbsoluta
+	varianciaPorFrequenciaRelativa,
+	desvioPadraoPorFrequenciaAbsoluta,
+	desvioPadraoPorFrequenciaRelativa
 }
