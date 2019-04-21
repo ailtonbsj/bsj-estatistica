@@ -74,7 +74,7 @@ Adotou-se o seguinte critério de avaliação: caso a diferença entre as notas 
 Com base nos dados apresentados a seguirm conclua se há divergẽncia entre a opinião dos moradores de uma cidade a outra.
 
 ```js
-let cidadeAPont = [
+let pontuacao = [
 	{inferior: 10, superior: 30},
 	{inferior: 30, superior: 50},
 	{inferior: 50, superior: 70},
@@ -82,5 +82,6 @@ let cidadeAPont = [
 ];
 
 let cidadeAPorc = [45, 20, 25, 10];
-```
 
+let cidadeBPorc = [23, 46, 29, 2];
+```

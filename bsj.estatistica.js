@@ -130,7 +130,7 @@ function graficoDeBarras(titulo, classes, Ni){
 	        }]
 	    },
 	}
-	let chartNode = new ChartjsNode(600, 600);
+	let chartNode = new ChartjsNode(600, 400);
 	chartNode.drawChart({
 		type: 'bar',
 		data: {

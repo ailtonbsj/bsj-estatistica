@@ -13,8 +13,8 @@ let cidadeAPorc = [45, 20, 25, 10];
 
 let cidadeBPorc = [23, 46, 29, 2];
 
-//s.graficoDeBarras("Cidade A", pontuacao, cidadeAPorc);
-//s.graficoDeBarras("Cidade B", pontuacao, cidadeBPorc);
+s.graficoDeBarras("Cidade A", pontuacao, cidadeAPorc);
+s.graficoDeBarras("Cidade B", pontuacao, cidadeBPorc);
 
 let Xi = s.mediaDasClasses(pontuacao);
 console.log("Xi:", Xi);
