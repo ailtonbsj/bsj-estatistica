@@ -19,7 +19,7 @@ console.log("Fac:", Fac);
 
 console.log( "Amplitudes:", s.amplitudeDasClasses(colesterol) );
 
-console.log( "mediana:", s.mediana(colesterol, numFuncionarios) );
+console.log( "mediana:", s.medianaPorFrequenciaAbsoluta(colesterol, numFuncionarios) );
 
 let Xi = s.mediaDasClasses(colesterol);
 console.log("Xi:", Xi);

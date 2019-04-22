@@ -6,7 +6,7 @@ function classesEFrequenciaAbsoluta(vetorBruto, inferiorInicial, amplitude) {
 	let Ni = [];
 	let cont = 0;
 
-	vetorBruto.sort();
+	vetorBruto.sort((a, b) => a - b);
 	vetorBruto.map(val => {
 		if( ! (val >= inferiorInicial && val < inferiorInicial+amplitude) ) {
 			cont++;
@@ -77,7 +77,7 @@ function mediaPorFrequenciaRelativa(Xi, Fi) {
 	return somatorio(produtoDeVetores(Xi, Fi));
 }
 
-function mediana(classes, Ni) {
+function medianaPorFrequenciaAbsoluta(classes, Ni) {
 	let somaNi = somatorio(Ni);
 	let Fc = frequenciaAcumulada(Ni);
 	let index = obterIndicePorValor(Fc, somaNi/2);
@@ -163,6 +163,40 @@ function graficoDeBarras(titulo, classes, Ni){
 	});
 }
 
+function media(vetor) {
+	return somatorio(vetor) / vetor.length;
+}
+
+function mediana(vetor) {
+	let length = vetor.length;
+	let i = Math.trunc(length/2);
+	let v = [...vetor];
+	v.sort((a, b) => a - b);
+	if(length % 2) {
+		return v[i];
+	} else {
+		return media( [ v[i], v[i-1] ] );
+	}
+}
+
+function moda(vetor) {
+	let v = [...vetor];
+	let cont = {};
+	v.map( i => cont[i] == null ? cont[i]=1 : cont[i]++ );
+	let max = Number.NEGATIVE_INFINITY;
+	let moda = [];
+	for(let i in cont) {
+		if(cont[i] > max) {
+			moda = [];
+			moda.push(parseFloat(i));
+			max = cont[i];
+		}
+		else if(cont[i] == max) moda.push(parseFloat(i));
+	}
+	if(v.length == moda.length) moda = [];
+	return moda;
+}
+
 module.exports = {
 	classesEFrequenciaAbsoluta,
 	mediaDasClasses,
@@ -175,10 +209,13 @@ module.exports = {
 	frequenciaRelativa,
 	mediaPorFrequenciaAbsoluta,
 	mediaPorFrequenciaRelativa,
-	mediana,
+	medianaPorFrequenciaAbsoluta,
 	varianciaPorFrequenciaAbsoluta,
 	varianciaPorFrequenciaRelativa,
 	desvioPadraoPorFrequenciaAbsoluta,
 	desvioPadraoPorFrequenciaRelativa,
-	graficoDeBarras
+	graficoDeBarras,
+	media,
+	mediana,
+	moda
 }

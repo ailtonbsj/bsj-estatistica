@@ -112,3 +112,22 @@ b) Utilizando apenas os dados agrupados, responda:
 
 - Qual turma apresentou melhor aproveitamento?
 - Qual turma apresentou desempenho mais regular?
+
+### 006
+
+As tabelas seguintes relacionam os países com maior consumo anual de peixe.
+
+```js
+let pais = [
+	"China", "Japao", "EUA", "India", "Indonesia", "Russia",
+	"Correia do Sul", "Filipinas", "Franca", "Espanha"
+];
+
+let quantPeixes = [
+	30, 8, 6, 4, 4, 3, 2, 2, 2, 2
+];
+```
+
+a) Calcule a média, a mediana e a moda dos dados apresentados. Por que a média é bem maior que as outras duas medidas?
+
+b) Sabendo que a população da China é  1,285 bilhão de habitantes e a da Espanha é 39,9 milhões de habitantes, mostre que o consumo per capita anual na Espanha é maior que o dobro do consumo per capita na China.

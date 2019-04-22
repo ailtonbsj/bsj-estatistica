@@ -35,7 +35,7 @@ console.log("Classe modal da media:",
 let Fac = s.frequenciaAcumulada(numAtletas);
 console.log("Frequencia Acumulada:", Fac);
 
-console.log("Mediana:", s.mediana(alturas, numAtletas) );
+console.log("Mediana:", s.medianaPorFrequenciaAbsoluta(alturas, numAtletas) );
 
 let XiMenosMedia = Xi.map( xi => (xi - media).toFixed(2) );
 console.log("Xi-X:", XiMenosMedia);
