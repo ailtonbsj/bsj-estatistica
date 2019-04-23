@@ -29,8 +29,8 @@ console.log("Somatorio Ni:", s.somatorio(numAtletas));
 let media = s.mediaPorFrequenciaAbsoluta(Xi, numAtletas);
 console.log("Media:", media.toFixed(2) );
 
-console.log("Classe modal da media:", 
-			s.obterClassePorValor(alturas, media, true) );
+console.log("Classe modal:", 
+			s.obterClassesModais(alturas, numAtletas, true) );
 
 let Fac = s.frequenciaAcumulada(numAtletas);
 console.log("Frequencia Acumulada:", Fac);

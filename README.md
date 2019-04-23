@@ -131,3 +131,25 @@ let quantPeixes = [
 a) Calcule a média, a mediana e a moda dos dados apresentados. Por que a média é bem maior que as outras duas medidas?
 
 b) Sabendo que a população da China é  1,285 bilhão de habitantes e a da Espanha é 39,9 milhões de habitantes, mostre que o consumo per capita anual na Espanha é maior que o dobro do consumo per capita na China.
+
+## 007
+
+Um radar fotográfico, instalado em uma rodovia na qual o limite de velocidade é 100 km/h, registrou em uma semana x multas por excesso de velocidade, assim distribuídas:
+
+```js
+let velocidade = [
+	{ inferior: 101, superior: 108 },
+	{ inferior: 108, superior: 115 },
+	{ inferior: 115, superior: 122 },
+	{ inferior: 122, superior: 129 },
+	{ inferior: 129, superior: 136 }
+];
+
+let ocorrencias = [34, 41, 35, 22, 18];
+```
+
+a) Determine o valor de x.
+
+b) Calcule a média, a classe modal, a mediana e o desvio padrão da velocidade em que estavam os veículos quando foram multados.
+
+c) Se o valor das multas varia de acordo com a faixa de velocidade ultrapassada, começando por R$180,00 e aumentando sempre 20% em relação à faixa anteiror, determine o valor das multas aplicadas.
